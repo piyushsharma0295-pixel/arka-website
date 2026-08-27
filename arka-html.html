@@ -1,0 +1,1438 @@
+﻿​<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arka Design & Structures | Architecture, Structural Engineering & Interior Design | Indore</title>
+  <meta name="description" content="Arka Design & Structures – Premium Architecture, Structural Engineering, Interior Design, PEB Design, Construction Consultancy and Project Management in Indore, India." />
+  <meta name="keywords" content="Architect in India, Structural Engineer, Architecture Consultancy, Interior Designer, PEB Design Consultant, RCC Structural Design, Industrial Shed Design, Warehouse Design, Construction Consultancy, BOQ Cost Estimation, Residential Architect, Commercial Building Design, Indore Architect" />
+  <meta property="og:title" content="Arka Design & Structures" />
+  <meta property="og:description" content="Premium Architecture & Structural Engineering Consultancy in Indore, India." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8C96A;
+      --gold-dark: #A07830;
+      --black: #0D0D0D;
+      --charcoal: #1A1A2E;
+      --charcoal2: #222222;
+      --white: #FFFFFF;
+      --off-white: #F8F6F0;
+      --gray: #888888;
+      --light-gray: #F2F2F2;
+      --glass: rgba(255,255,255,0.08);
+      --glass-border: rgba(201,168,76,0.25);
+      --shadow: 0 20px 60px rgba(0,0,0,0.15);
+      --shadow-gold: 0 8px 32px rgba(201,168,76,0.3);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--white);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--charcoal); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    /* ===== NAVBAR ===== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      padding: 0 5%;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 75px;
+      background: rgba(13,13,13,0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--glass-border);
+      transition: all 0.3s ease;
+    }
+
+    nav.scrolled {
+      height: 65px;
+      background: rgba(13,13,13,0.98);
+    }
+
+    .logo {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-mark {
+      width: 44px; height: 44px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 900; color: var(--black);
+      letter-spacing: -1px;
+      box-shadow: var(--shadow-gold);
+    }
+
+    .logo-text { display: flex; flex-direction: column; line-height: 1; }
+    .logo-text .name { font-size: 18px; font-weight: 700; color: var(--white); letter-spacing: 2px; }
+    .logo-text .tagline { font-size: 9px; color: var(--gold); letter-spacing: 3px; text-transform: uppercase; }
+
+    .nav-links { display: flex; align-items: center; gap: 32px; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.8); text-decoration: none;
+      font-size: 13px; font-weight: 500; letter-spacing: 0.5px;
+      transition: color 0.3s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: ''; position: absolute; bottom: -4px; left: 0; right: 0;
+      height: 1px; background: var(--gold);
+      transform: scaleX(0); transition: transform 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    .nav-cta {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--black) !important;
+      padding: 10px 22px; border-radius: 6px;
+      font-weight: 700 !important; letter-spacing: 0.5px;
+      transition: transform 0.2s, box-shadow 0.2s !important;
+    }
+    .nav-cta::after { display: none !important; }
+    .nav-cta:hover { transform: translateY(-2px) !important; box-shadow: var(--shadow-gold) !important; color: var(--black) !important; }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { display: block; width: 25px; height: 2px; background: var(--white); transition: all 0.3s; }
+
+    /* ===== HERO ===== */
+    #hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0D0D0D 0%, #1a1a2e 50%, #0D0D0D 100%);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden; padding: 120px 5% 80px;
+    }
+
+    .hero-bg-pattern {
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 50%, rgba(201,168,76,0.12) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(201,168,76,0.08) 0%, transparent 40%),
+        radial-gradient(circle at 60% 80%, rgba(201,168,76,0.06) 0%, transparent 35%);
+    }
+
+    .hero-grid-bg {
+      position: absolute; inset: 0;
+      background-image: linear-gradient(rgba(201,168,76,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,168,76,0.05) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .hero-content { position: relative; z-index: 2; max-width: 800px; }
+
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--glass); border: 1px solid var(--glass-border);
+      backdrop-filter: blur(10px);
+      padding: 8px 18px; border-radius: 100px;
+      color: var(--gold); font-size: 12px; font-weight: 600; letter-spacing: 2px;
+      text-transform: uppercase; margin-bottom: 30px;
+      animation: fadeUp 0.8s ease forwards;
+    }
+
+    .hero-badge::before {
+      content: ''; width: 6px; height: 6px; background: var(--gold);
+      border-radius: 50%; animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.5); }
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 64px);
+      font-weight: 800; color: var(--white);
+      line-height: 1.1; margin-bottom: 24px;
+      animation: fadeUp 0.8s ease 0.2s forwards; opacity: 0;
+    }
+
+    h1 span { color: var(--gold); }
+
+    .hero-sub {
+      font-size: clamp(15px, 1.5vw, 18px); color: rgba(255,255,255,0.65);
+      line-height: 1.7; max-width: 650px; margin-bottom: 42px;
+      animation: fadeUp 0.8s ease 0.4s forwards; opacity: 0;
+    }
+
+    .hero-btns {
+      display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 60px;
+      animation: fadeUp 0.8s ease 0.6s forwards; opacity: 0;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--black); padding: 16px 36px; border-radius: 8px;
+      font-weight: 700; font-size: 15px; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: var(--shadow-gold);
+    }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(201,168,76,0.45); }
+
+    .btn-secondary {
+      background: transparent; color: var(--white);
+      border: 1px solid rgba(255,255,255,0.3);
+      padding: 16px 36px; border-radius: 8px;
+      font-weight: 600; font-size: 15px; text-decoration: none;
+      display: inline-flex; align-items: center; gap: 10px;
+      transition: all 0.3s;
+    }
+    .btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+    .hero-stats {
+      display: flex; flex-wrap: wrap; gap: 24px;
+      animation: fadeUp 0.8s ease 0.8s forwards; opacity: 0;
+    }
+
+    .stat-pill {
+      background: var(--glass); border: 1px solid var(--glass-border);
+      backdrop-filter: blur(10px); border-radius: 100px;
+      padding: 12px 22px; display: flex; align-items: center; gap: 10px;
+      color: var(--white);
+    }
+    .stat-pill i { color: var(--gold); font-size: 16px; }
+    .stat-pill strong { font-weight: 700; font-size: 15px; }
+    .stat-pill span { font-size: 12px; color: rgba(255,255,255,0.6); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== SECTIONS ===== */
+    section { padding: 90px 5%; }
+
+    .section-label {
+      display: inline-block;
+      font-size: 11px; font-weight: 700; letter-spacing: 4px;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 800; line-height: 1.2;
+      color: var(--charcoal); margin-bottom: 16px;
+    }
+
+    .section-title span { color: var(--gold); }
+
+    .section-sub {
+      font-size: 16px; color: var(--gray); line-height: 1.7;
+      max-width: 580px; margin-bottom: 60px;
+    }
+
+    .section-title-dark { color: var(--white); }
+    .section-sub-dark { color: rgba(255,255,255,0.6); }
+
+    /* ===== ABOUT ===== */
+    #about { background: var(--off-white); }
+
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 70px;
+      align-items: center;
+    }
+
+    .about-image-wrap {
+      position: relative;
+      border-radius: 20px; overflow: hidden;
+      aspect-ratio: 4/3;
+    }
+
+    .about-image-placeholder {
+      width: 100%; height: 100%;
+      background: linear-gradient(135deg, var(--charcoal), #2a2a4a);
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 16px;
+    }
+
+    .about-image-placeholder i { font-size: 60px; color: var(--gold); opacity: 0.6; }
+    .about-image-placeholder p { color: rgba(255,255,255,0.4); font-size: 14px; }
+
+    .about-badge {
+      position: absolute; bottom: 24px; right: 24px;
+      background: var(--gold); border-radius: 12px;
+      padding: 16px 22px; text-align: center;
+    }
+    .about-badge strong { display: block; font-size: 28px; font-weight: 900; color: var(--black); }
+    .about-badge span { font-size: 11px; color: var(--charcoal); font-weight: 600; }
+
+    .about-features { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+
+    .about-feature {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 16px; background: var(--white);
+      border-radius: 12px; border: 1px solid rgba(201,168,76,0.15);
+    }
+
+    .about-feature i {
+      color: var(--gold); font-size: 18px; margin-top: 2px; flex-shrink: 0;
+    }
+
+    .about-feature h4 { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+    .about-feature p { font-size: 12px; color: var(--gray); }
+
+    /* ===== SERVICES ===== */
+    #services { background: var(--charcoal); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      backdrop-filter: blur(10px);
+      border-radius: 16px; padding: 32px;
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      cursor: pointer;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-gold);
+      border-color: var(--gold);
+    }
+
+    .service-icon {
+      width: 56px; height: 56px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .service-icon i { font-size: 22px; color: var(--gold); }
+
+    .service-card h3 { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
+
+    .service-card p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.7; margin-bottom: 18px; }
+
+    .service-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .service-tag {
+      padding: 4px 10px; border-radius: 100px;
+      background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.2);
+      font-size: 10px; color: var(--gold); font-weight: 600; letter-spacing: 0.5px;
+    }
+
+    /* ===== WHY CHOOSE US ===== */
+    #why { background: var(--off-white); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .why-card {
+      background: var(--white); border-radius: 16px;
+      padding: 32px 28px;
+      border: 1px solid rgba(201,168,76,0.1);
+      transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+      text-align: center;
+    }
+
+    .why-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+      border-color: var(--gold);
+    }
+
+    .why-num {
+      font-size: 42px; font-weight: 900;
+      color: rgba(201,168,76,0.15); line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .why-icon-wrap {
+      width: 64px; height: 64px; margin: 0 auto 20px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      border-radius: 18px;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: var(--shadow-gold);
+    }
+    .why-icon-wrap i { font-size: 26px; color: var(--black); }
+
+    .why-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; }
+    .why-card p { font-size: 13px; color: var(--gray); line-height: 1.6; }
+
+    /* ===== PORTFOLIO ===== */
+    #portfolio { background: var(--charcoal); }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .portfolio-item {
+      border-radius: 16px; overflow: hidden;
+      position: relative; cursor: pointer;
+      aspect-ratio: 4/3;
+    }
+
+    .portfolio-item:nth-child(1) { grid-column: span 2; }
+    .portfolio-item:nth-child(5) { grid-column: span 2; }
+
+    .portfolio-img {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; gap: 12px;
+      transition: transform 0.5s;
+    }
+
+    .portfolio-item:nth-child(1) .portfolio-img { background: linear-gradient(135deg, #1a1a2e, #2d2d5e); }
+    .portfolio-item:nth-child(2) .portfolio-img { background: linear-gradient(135deg, #2a1a0e, #5e3d1a); }
+    .portfolio-item:nth-child(3) .portfolio-img { background: linear-gradient(135deg, #0e2a1a, #1a5e3d); }
+    .portfolio-item:nth-child(4) .portfolio-img { background: linear-gradient(135deg, #2a0e1a, #5e1a3d); }
+    .portfolio-item:nth-child(5) .portfolio-img { background: linear-gradient(135deg, #1a2a0e, #3d5e1a); }
+    .portfolio-item:nth-child(6) .portfolio-img { background: linear-gradient(135deg, #0e1a2a, #1a3d5e); }
+
+    .portfolio-img i { font-size: 42px; color: rgba(201,168,76,0.5); }
+    .portfolio-img span { font-size: 13px; color: rgba(255,255,255,0.4); }
+
+    .portfolio-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 50%);
+      opacity: 0; transition: opacity 0.3s;
+      display: flex; align-items: flex-end; padding: 24px;
+    }
+
+    .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+    .portfolio-item:hover .portfolio-img { transform: scale(1.05); }
+
+    .portfolio-info h4 { font-size: 16px; font-weight: 700; color: var(--white); }
+    .portfolio-info span { font-size: 12px; color: var(--gold); }
+
+    /* ===== PROCESS ===== */
+    #process { background: var(--white); }
+
+    .process-timeline {
+      position: relative; max-width: 900px; margin: 0 auto;
+    }
+
+    .process-timeline::before {
+      content: '';
+      position: absolute; left: 50%; top: 0; bottom: 0;
+      width: 2px; background: linear-gradient(to bottom, var(--gold), transparent);
+      transform: translateX(-50%);
+    }
+
+    .process-step {
+      display: flex; align-items: flex-start; gap: 40px;
+      margin-bottom: 50px; position: relative;
+    }
+
+    .process-step:nth-child(even) { flex-direction: row-reverse; }
+
+    .process-content {
+      flex: 1; background: var(--off-white);
+      border-radius: 16px; padding: 28px;
+      border: 1px solid rgba(201,168,76,0.15);
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    .process-content:hover { border-color: var(--gold); box-shadow: var(--shadow); }
+
+    .process-num {
+      width: 52px; height: 52px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      border-radius: 50%; display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 800; color: var(--black);
+      position: relative; z-index: 1;
+      box-shadow: var(--shadow-gold);
+      margin-top: 10px;
+    }
+
+    .process-content h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+    .process-content p { font-size: 13px; color: var(--gray); line-height: 1.6; }
+
+    /* ===== TESTIMONIALS ===== */
+    #testimonials { background: var(--charcoal); }
+
+    .testimonials-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;
+    }
+
+    .testimonial-card {
+      background: var(--glass); border: 1px solid var(--glass-border);
+      backdrop-filter: blur(10px); border-radius: 20px; padding: 32px;
+      transition: transform 0.3s, border-color 0.3s;
+    }
+    .testimonial-card:hover { transform: translateY(-6px); border-color: var(--gold); }
+
+    .stars { color: var(--gold); font-size: 14px; margin-bottom: 16px; letter-spacing: 2px; }
+
+    .testimonial-card p {
+      font-size: 14px; color: rgba(255,255,255,0.75);
+      line-height: 1.8; margin-bottom: 24px; font-style: italic;
+    }
+
+    .testimonial-author { display: flex; align-items: center; gap: 14px; }
+
+    .author-avatar {
+      width: 46px; height: 46px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 700; color: var(--black);
+    }
+
+    .author-info h4 { font-size: 14px; font-weight: 700; color: var(--white); }
+    .author-info span { font-size: 12px; color: var(--gold); }
+
+    /* ===== CONTACT ===== */
+    #contact { background: var(--off-white); }
+
+    .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: start; }
+
+    .contact-info h2 { font-size: clamp(26px, 3vw, 36px); font-weight: 800; margin-bottom: 12px; }
+    .contact-info p { font-size: 15px; color: var(--gray); line-height: 1.7; margin-bottom: 36px; }
+
+    .contact-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      margin-bottom: 24px; padding: 20px;
+      background: var(--white); border-radius: 14px;
+      border: 1px solid rgba(201,168,76,0.15);
+      transition: border-color 0.3s;
+    }
+    .contact-item:hover { border-color: var(--gold); }
+
+    .contact-icon {
+      width: 46px; height: 46px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .contact-icon i { font-size: 18px; color: var(--black); }
+    .contact-item h4 { font-size: 12px; font-weight: 700; color: var(--gray); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+    .contact-item a, .contact-item p { font-size: 14px; font-weight: 600; color: var(--charcoal); text-decoration: none; }
+    .contact-item a:hover { color: var(--gold); }
+
+    .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 8px; }
+    .hours-grid span { font-size: 12px; color: var(--gray); }
+    .hours-grid strong { font-size: 12px; color: var(--charcoal); font-weight: 600; }
+
+    .contact-form-wrap {
+      background: var(--white); border-radius: 20px;
+      padding: 40px; box-shadow: var(--shadow);
+      border: 1px solid rgba(201,168,76,0.1);
+    }
+
+    .contact-form-wrap h3 { font-size: 22px; font-weight: 700; margin-bottom: 28px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--charcoal); margin-bottom: 7px; letter-spacing: 0.5px; }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%; padding: 13px 16px;
+      border: 1.5px solid rgba(0,0,0,0.1);
+      border-radius: 10px; font-family: 'Poppins', sans-serif;
+      font-size: 14px; color: var(--charcoal);
+      background: var(--off-white);
+      transition: border-color 0.3s, box-shadow 0.3s;
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    .form-submit {
+      width: 100%; padding: 16px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      color: var(--black); border: none; border-radius: 10px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px; font-weight: 700; cursor: pointer;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .form-submit:hover { transform: translateY(-2px); box-shadow: var(--shadow-gold); }
+
+    .form-success {
+      display: none; text-align: center; padding: 20px;
+      color: #27ae60; font-weight: 600; font-size: 15px;
+    }
+
+    /* ===== MAP ===== */
+    .map-section { background: var(--charcoal); padding: 0; }
+    .map-wrap { height: 400px; position: relative; }
+    .map-wrap iframe { width: 100%; height: 100%; border: none; filter: grayscale(0.3); }
+
+    /* ===== FOOTER ===== */
+    footer { background: var(--black); padding: 70px 5% 30px; }
+
+    .footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 50px; margin-bottom: 50px;
+    }
+
+    .footer-brand .logo-text .name { font-size: 22px; }
+    .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.8; margin: 20px 0; max-width: 280px; }
+
+    .footer-social { display: flex; gap: 12px; }
+    .footer-social a {
+      width: 38px; height: 38px; border-radius: 10px;
+      background: var(--glass); border: 1px solid var(--glass-border);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.6); font-size: 15px;
+      transition: all 0.3s; text-decoration: none;
+    }
+    .footer-social a:hover { background: var(--gold); border-color: var(--gold); color: var(--black); }
+
+    .footer-col h4 { font-size: 13px; font-weight: 700; color: var(--white); letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 20px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: rgba(255,255,255,0.45); text-decoration: none; font-size: 13px; transition: color 0.3s; }
+    .footer-col ul li a:hover { color: var(--gold); }
+
+    .footer-contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 14px; }
+    .footer-contact-item i { color: var(--gold); font-size: 14px; margin-top: 2px; flex-shrink: 0; }
+    .footer-contact-item span { font-size: 13px; color: rgba(255,255,255,0.45); }
+    .footer-contact-item a { font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; }
+    .footer-contact-item a:hover { color: var(--gold); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 30px;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 16px;
+    }
+
+    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.3); }
+    .footer-bottom a { color: var(--gold); text-decoration: none; }
+
+    /* ===== FLOATING BUTTONS ===== */
+    .float-whatsapp {
+      position: fixed; bottom: 90px; right: 24px; z-index: 999;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; color: var(--white);
+      box-shadow: 0 4px 20px rgba(37,211,102,0.5);
+      text-decoration: none;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .float-whatsapp:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(37,211,102,0.7); }
+
+    .float-call {
+      position: fixed; bottom: 158px; right: 24px; z-index: 999;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; color: var(--black);
+      box-shadow: var(--shadow-gold);
+      text-decoration: none;
+      transition: transform 0.3s;
+    }
+    .float-call:hover { transform: scale(1.1); }
+
+    .float-top {
+      position: fixed; bottom: 24px; right: 24px; z-index: 999;
+      width: 46px; height: 46px; border-radius: 12px;
+      background: var(--charcoal); border: 1px solid var(--glass-border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: var(--gold);
+      cursor: pointer; opacity: 0; pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .float-top.visible { opacity: 1; pointer-events: all; }
+    .float-top:hover { transform: translateY(-3px); }
+
+    /* ===== STATS BAR ===== */
+    .stats-bar { background: linear-gradient(90deg, var(--charcoal), #1a1a2e); padding: 50px 5%; }
+    .stats-inner { display: flex; justify-content: center; flex-wrap: wrap; gap: 60px; }
+    .stat-item { text-align: center; }
+    .stat-item strong { display: block; font-size: clamp(32px, 4vw, 48px); font-weight: 900; color: var(--gold); line-height: 1; }
+    .stat-item span { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 6px; display: block; }
+
+    /* ===== ANNOUNCEMENT BANNER ===== */
+    .announcement {
+      background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-dark));
+      padding: 10px 5%; text-align: center;
+      font-size: 13px; color: var(--black); font-weight: 600;
+      position: relative; z-index: 999;
+    }
+    .announcement a { color: var(--black); text-decoration: underline; }
+
+    /* ===== MOBILE NAV ===== */
+    .mobile-menu {
+      display: none; position: fixed; top: 75px; left: 0; right: 0; z-index: 999;
+      background: rgba(13,13,13,0.98); backdrop-filter: blur(20px);
+      padding: 20px 5%; flex-direction: column; gap: 8px;
+      border-bottom: 1px solid var(--glass-border);
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: rgba(255,255,255,0.8); text-decoration: none;
+      font-size: 15px; padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .mobile-menu a:hover { color: var(--gold); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .about-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .process-timeline::before { display: none; }
+      .process-step, .process-step:nth-child(even) { flex-direction: column; gap: 16px; }
+      .portfolio-grid { grid-template-columns: 1fr 1fr; }
+      .portfolio-item:nth-child(1), .portfolio-item:nth-child(5) { grid-column: span 1; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-btns { flex-direction: column; }
+      .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+      .portfolio-grid { grid-template-columns: 1fr; }
+      .portfolio-item:nth-child(1), .portfolio-item:nth-child(5) { grid-column: span 1; }
+      .about-features { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement -->
+  <div class="announcement">
+    Free Consultation Available — Call Now: <a href="tel:+919039302442">+91 90393 02442</a>
+  </div>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <a href="#hero" class="logo">
+      <div class="logo-mark">A</div>
+      <div class="logo-text">
+        <span class="name">ARKA</span>
+        <span class="tagline">Design & Structures</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#testimonials">Clients</a></li>
+      <li><a href="#contact" class="nav-cta">Get Free Consultation</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#services" onclick="closeMenu()">Services</a>
+    <a href="#portfolio" onclick="closeMenu()">Portfolio</a>
+    <a href="#process" onclick="closeMenu()">Process</a>
+    <a href="#testimonials" onclick="closeMenu()">Clients</a>
+    <a href="#contact" onclick="closeMenu()" style="color: var(--gold); font-weight: 700;">Get Free Consultation</a>
+  </div>
+
+  <!-- Hero -->
+  <section id="hero">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>Architecture & Structural Engineering</span>
+      </div>
+      <h1>Designing Tomorrow's<br /><span>Landmarks</span> with<br />Engineering Excellence</h1>
+      <p class="hero-sub">We provide Architecture, Structural Engineering, Interior Design, Construction Consultancy, and Project Management for Residential, Commercial, Industrial, and Infrastructure Projects across India.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">
+          <i class="fas fa-comments"></i> Get Free Consultation
+        </a>
+        <a href="https://wa.me/919039302442?text=Hello%2C%20I%20would%20like%20to%20request%20a%20quote%20for%20my%20project." class="btn-secondary" target="_blank">
+          <i class="fab fa-whatsapp"></i> Request a Quote
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-pill"><i class="fas fa-building"></i><div><strong>200+</strong><span>Projects</span></div></div>
+        <div class="stat-pill"><i class="fas fa-users"></i><div><strong>Expert</strong><span>Engineering Team</span></div></div>
+        <div class="stat-pill"><i class="fas fa-coins"></i><div><strong>Cost-Optimized</strong><span>Designs</span></div></div>
+        <div class="stat-pill"><i class="fas fa-clock"></i><div><strong>On-Time</strong><span>Delivery</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat-item"><strong>200+</strong><span>Projects Completed</span></div>
+      <div class="stat-item"><strong>50+</strong><span>Happy Clients</span></div>
+      <div class="stat-item"><strong>10+</strong><span>Service Offerings</span></div>
+      <div class="stat-item"><strong>100%</strong><span>Client Satisfaction</span></div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section id="about">
+    <span class="section-label">Who We Are</span>
+    <div class="about-grid">
+      <div class="about-image-wrap">
+        <div class="about-image-placeholder">
+          <i class="fas fa-drafting-compass"></i>
+          <p>Concept to Completion</p>
+        </div>
+        <div class="about-badge">
+          <strong>200+</strong>
+          <span>Projects Delivered</span>
+        </div>
+      </div>
+      <div>
+        <span class="section-label">About Us</span>
+        <h2 class="section-title">Complete <span>End-to-End</span><br />Consultancy</h2>
+        <p style="color: var(--gray); font-size: 15px; line-height: 1.8; margin-bottom: 28px;">
+          Arka Design & Structures is a multidisciplinary consultancy providing complete solutions from concept to completion. Our team of experienced Architects, Structural Engineers, Interior Designers, and Project Consultants work together to deliver projects that are innovative, safe, cost-optimized, and built to last.
+        </p>
+        <p style="color: var(--gray); font-size: 15px; line-height: 1.8; margin-bottom: 32px;">
+          We serve homeowners, builders, developers, industries, factories, warehouses, hotels, hospitals, educational institutions, and government organizations across India with a commitment to excellence at every stage.
+        </p>
+        <div class="about-features">
+          <div class="about-feature">
+            <i class="fas fa-lightbulb"></i>
+            <div><h4>Innovative Design</h4><p>Modern, functional, and aesthetically superior design solutions</p></div>
+          </div>
+          <div class="about-feature">
+            <i class="fas fa-shield-alt"></i>
+            <div><h4>Structural Safety</h4><p>IS code compliant structural design with zero compromise</p></div>
+          </div>
+          <div class="about-feature">
+            <i class="fas fa-tags"></i>
+            <div><h4>Cost Optimization</h4><p>Value-engineered solutions that maximize your budget</p></div>
+          </div>
+          <div class="about-feature">
+            <i class="fas fa-leaf"></i>
+            <div><h4>Sustainable Construction</h4><p>Eco-friendly practices and sustainable material choices</p></div>
+          </div>
+        </div>
+        <div style="margin-top: 32px;">
+          <a href="#contact" class="btn-primary" style="display: inline-flex;">
+            <i class="fas fa-phone"></i> Talk to Our Experts
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <span class="section-label">What We Do</span>
+      <h2 class="section-title section-title-dark">Our <span>Expert</span> Services</h2>
+      <p class="section-sub section-sub-dark" style="margin: 0 auto;">Complete multidisciplinary consultancy under one roof — from concept design to construction supervision.</p>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-building"></i></div>
+        <h3>Architecture</h3>
+        <p>Creative and functional architectural designs for all building types — residential, commercial, and institutional.</p>
+        <div class="service-tags">
+          <span class="service-tag">House Planning</span>
+          <span class="service-tag">Villa Design</span>
+          <span class="service-tag">Commercial Buildings</span>
+          <span class="service-tag">3D Elevation</span>
+          <span class="service-tag">Approval Drawings</span>
+          <span class="service-tag">Landscape Design</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
+        <h3>Structural Engineering</h3>
+        <p>Precision structural analysis and design using industry-leading software for safe and optimized structures.</p>
+        <div class="service-tags">
+          <span class="service-tag">RCC Design</span>
+          <span class="service-tag">Steel Structures</span>
+          <span class="service-tag">PEB Design</span>
+          <span class="service-tag">Foundation Design</span>
+          <span class="service-tag">STAAD Pro</span>
+          <span class="service-tag">ETABS</span>
+          <span class="service-tag">Tekla</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-couch"></i></div>
+        <h3>Interior Design</h3>
+        <p>Luxury interior environments crafted with precision — blending aesthetics, function, and personality.</p>
+        <div class="service-tags">
+          <span class="service-tag">Luxury Homes</span>
+          <span class="service-tag">Modular Kitchen</span>
+          <span class="service-tag">Office Interiors</span>
+          <span class="service-tag">Hotels</span>
+          <span class="service-tag">Restaurants</span>
+          <span class="service-tag">Retail Spaces</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
+        <h3>Construction Consultancy</h3>
+        <p>End-to-end construction management from estimation and tendering through to site supervision and handover.</p>
+        <div class="service-tags">
+          <span class="service-tag">BOQ</span>
+          <span class="service-tag">Cost Estimation</span>
+          <span class="service-tag">Tender Documentation</span>
+          <span class="service-tag">Quantity Surveying</span>
+          <span class="service-tag">Site Supervision</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-industry"></i></div>
+        <h3>Industrial Consultancy</h3>
+        <p>Specialized design and engineering for industrial, manufacturing, and logistics infrastructure projects.</p>
+        <div class="service-tags">
+          <span class="service-tag">Warehouses</span>
+          <span class="service-tag">Factories</span>
+          <span class="service-tag">Industrial Sheds</span>
+          <span class="service-tag">CNG Stations</span>
+          <span class="service-tag">Manufacturing Plants</span>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-project-diagram"></i></div>
+        <h3>Project Management</h3>
+        <p>Professional project management ensuring your project is delivered on time, within budget, and to specification.</p>
+        <div class="service-tags">
+          <span class="service-tag">Project Planning</span>
+          <span class="service-tag">Execution Support</span>
+          <span class="service-tag">Structural Audit</span>
+          <span class="service-tag">3D Visualization</span>
+          <span class="service-tag">Turnkey Solutions</span>
+        </div>
+      </div>
+
+    </div>
+    <div style="text-align: center; margin-top: 50px;">
+      <a href="#contact" class="btn-primary">
+        <i class="fas fa-arrow-right"></i> Enquire About a Service
+      </a>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <span class="section-label">Why Arka</span>
+      <h2 class="section-title">Why Clients <span>Choose Us</span></h2>
+      <p class="section-sub" style="margin: 0 auto;">We combine design creativity with engineering precision to deliver projects that exceed expectations.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-icon-wrap"><i class="fas fa-lightbulb"></i></div>
+        <h3>Innovative Designs</h3>
+        <p>Modern, forward-thinking design solutions tailored to your vision and functional requirements.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-wrap"><i class="fas fa-shield-alt"></i></div>
+        <h3>Structural Safety First</h3>
+        <p>Every structure we design adheres strictly to IS codes with zero compromise on safety standards.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-wrap"><i class="fas fa-user-tie"></i></div>
+        <h3>Experienced Professionals</h3>
+        <p>A multidisciplinary team of qualified architects, engineers, and consultants with deep expertise.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-wrap"><i class="fas fa-coins"></i></div>
+        <h3>Cost-Effective Solutions</h3>
+        <p>Value-engineered designs that optimize costs without compromising quality or safety.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-wrap"><i class="fas fa-laptop-code"></i></div>
+        <h3>Modern Technology</h3>
+        <p>Advanced software tools like STAAD Pro, ETABS, REVIT, and AutoCAD for precision design.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-wrap"><i class="fas fa-clock"></i></div>
+        <h3>Timely Delivery</h3>
+        <p>We respect your timeline and ensure deliverables are completed on schedule, every time.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-wrap"><i class="fas fa-comments"></i></div>
+        <h3>Transparent Communication</h3>
+        <p>Regular updates, clear reporting, and open communication throughout your project journey.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-icon-wrap"><i class="fas fa-key"></i></div>
+        <h3>Turnkey Solutions</h3>
+        <p>Complete end-to-end services from concept to completion — one team, zero hassle.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <span class="section-label">Our Work</span>
+      <h2 class="section-title section-title-dark">Project <span>Portfolio</span></h2>
+      <p class="section-sub section-sub-dark" style="margin: 0 auto;">A selection of residential, commercial, and industrial projects we have delivered across India.</p>
+    </div>
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <div class="portfolio-img"><i class="fas fa-home"></i><span>Luxury Villa — Indore</span></div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-info"><h4>Luxury Villa Project</h4><span>Architecture & Interior Design</span></div>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="portfolio-img"><i class="fas fa-industry"></i><span>Industrial Shed</span></div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-info"><h4>Industrial Warehouse</h4><span>Structural Engineering & PEB</span></div>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="portfolio-img"><i class="fas fa-building"></i><span>Commercial Complex</span></div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-info"><h4>Commercial Complex</h4><span>Architecture & Structural Design</span></div>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="portfolio-img"><i class="fas fa-couch"></i><span>Office Interior</span></div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-info"><h4>Corporate Office Interior</h4><span>Interior Design</span></div>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="portfolio-img"><i class="fas fa-warehouse"></i><span>Warehouse Facility</span></div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-info"><h4>Warehouse & Logistics</h4><span>Industrial Consultancy</span></div>
+        </div>
+      </div>
+      <div class="portfolio-item">
+        <div class="portfolio-img"><i class="fas fa-utensils"></i><span>Restaurant Design</span></div>
+        <div class="portfolio-overlay">
+          <div class="portfolio-info"><h4>Restaurant & Hospitality</h4><span>Architecture & Interiors</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 50px;">
+      <a href="https://wa.me/919039302442?text=I'd%20like%20to%20discuss%20a%20project%20with%20Arka%20Design%20%26%20Structures." class="btn-primary" target="_blank">
+        <i class="fab fa-whatsapp"></i> Discuss Your Project
+      </a>
+    </div>
+  </section>
+
+  <!-- Process -->
+  <section id="process">
+    <div style="text-align: center; margin-bottom: 70px;">
+      <span class="section-label">How We Work</span>
+      <h2 class="section-title">Our <span>Proven</span> Process</h2>
+      <p class="section-sub" style="margin: 0 auto;">A structured, transparent approach that keeps you informed and in control at every stage of your project.</p>
+    </div>
+    <div class="process-timeline">
+      <div class="process-step">
+        <div class="process-num">01</div>
+        <div class="process-content">
+          <h3>Initial Consultation</h3>
+          <p>Free consultation to understand your vision, requirements, site conditions, and project goals. We listen first, then plan.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">02</div>
+        <div class="process-content">
+          <h3>Site Visit & Assessment</h3>
+          <p>On-site assessment of your plot, existing structure, or proposed location to gather accurate data for design.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">03</div>
+        <div class="process-content">
+          <h3>Concept Design</h3>
+          <p>Initial design concepts with floor plans, 3D visualizations, and layout options for your review and feedback.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">04</div>
+        <div class="process-content">
+          <h3>Structural Analysis</h3>
+          <p>Complete structural analysis using STAAD Pro / ETABS to ensure your building is engineered for safety and longevity.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">05</div>
+        <div class="process-content">
+          <h3>BOQ & Cost Estimation</h3>
+          <p>Detailed Bill of Quantities and cost estimation so you know exactly what your project will cost before breaking ground.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">06</div>
+        <div class="process-content">
+          <h3>Construction Drawings</h3>
+          <p>Complete working drawings, approval drawings, and shop drawings ready for construction and municipal approvals.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">07</div>
+        <div class="process-content">
+          <h3>Execution Support</h3>
+          <p>Regular site visits and technical guidance during construction to ensure quality control and design compliance.</p>
+        </div>
+      </div>
+      <div class="process-step">
+        <div class="process-num">08</div>
+        <div class="process-content">
+          <h3>Project Completion</h3>
+          <p>Final inspection, completion certificate, as-built drawings, and handover documentation — your project, delivered perfectly.</p>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 50px;">
+      <a href="#contact" class="btn-primary">
+        <i class="fas fa-play"></i> Start Your Project Today
+      </a>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <span class="section-label">Client Reviews</span>
+      <h2 class="section-title section-title-dark">What Our <span>Clients Say</span></h2>
+      <p class="section-sub section-sub-dark" style="margin: 0 auto;">Trusted by homeowners, developers, and industries — here's what our clients have to say about working with us.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Arka Design & Structures transformed our vision into reality. The structural design was impeccable and the team was always available to answer our questions. Highly recommend for any residential project."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">R</div>
+          <div class="author-info"><h4>Rajesh Sharma</h4><span>Residential Villa, Indore</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"We needed a complete warehouse structural design with PEB. Arka delivered in time with excellent detailing. Their cost estimation was spot-on and the drawings were construction-ready."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">P</div>
+          <div class="author-info"><h4>Priya Mehta</h4><span>Industrial Warehouse, MP</span></div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p>"Outstanding interior design work for our restaurant. They understood our brand and created a space that our customers absolutely love. Professional, creative, and within budget."</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">A</div>
+          <div class="author-info"><h4>Amit Patel</h4><span>Restaurant Interior, Indore</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div style="text-align: center; margin-bottom: 60px;">
+      <span class="section-label">Get In Touch</span>
+      <h2 class="section-title">Let's Build Your <span>Dream Project</span> Together</h2>
+      <p class="section-sub" style="margin: 0 auto;">Ready to start? Reach out for a free consultation. We'll assess your project and guide you on the best path forward.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h2 class="section-title">Contact <span>Arka</span></h2>
+        <p>Reach us through any channel — WhatsApp, phone, or the enquiry form. We respond within 2 hours during business hours.</p>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+          <div>
+            <h4>WhatsApp</h4>
+            <a href="https://wa.me/919039302442" target="_blank">+91 90393 02442</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-phone"></i></div>
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:+919039302442">+91 90393 02442</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:info@arkadesignstructures.com">info@arkadesignstructures.com</a>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+          <div>
+            <h4>Office</h4>
+            <p>Indore, Madhya Pradesh, India</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon"><i class="fas fa-business-time"></i></div>
+          <div>
+            <h4>Business Hours</h4>
+            <div class="hours-grid">
+              <span>Mon – Sat</span><strong>9:00 AM – 7:00 PM</strong>
+              <span>Sunday</span><strong>By Appointment</strong>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px;">
+          <a href="https://wa.me/919039302442?text=Hello%2C%20I%20would%20like%20a%20free%20consultation%20for%20my%20project." class="btn-primary" target="_blank">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h3>Send Us an Enquiry</h3>
+        <form id="contactForm" onsubmit="submitForm(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" placeholder="Full Name" required />
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" placeholder="+91 XXXXX XXXXX" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="your@email.com" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Project Type *</label>
+              <select required>
+                <option value="">Select Project Type</option>
+                <option>Residential House / Villa</option>
+                <option>Commercial Building</option>
+                <option>Industrial / Warehouse</option>
+                <option>Interior Design</option>
+                <option>Structural Design (RCC/Steel)</option>
+                <option>PEB Design</option>
+                <option>BOQ & Cost Estimation</option>
+                <option>Project Management</option>
+                <option>Structural Audit</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Project Location</label>
+              <input type="text" placeholder="City, State" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Approximate Budget</label>
+            <select>
+              <option value="">Select Budget Range</option>
+              <option>Below ₹10 Lakhs</option>
+              <option>₹10 – ₹50 Lakhs</option>
+              <option>₹50 Lakhs – ₹1 Crore</option>
+              <option>₹1 Crore – ₹5 Crore</option>
+              <option>Above ₹5 Crore</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Project Description</label>
+            <textarea placeholder="Tell us about your project — plot size, requirements, timeline, or any specific needs..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">
+            <i class="fas fa-paper-plane"></i> Submit Enquiry
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle" style="font-size: 32px; margin-bottom: 10px; display: block;"></i>
+            Thank you! We'll contact you within 2 hours.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map -->
+  <div class="map-section">
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235013.52204032667!2d75.71749937726765!3d22.72406661060039!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcad1b410ddb%3A0x96ec4da356240f4!2sIndore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1695000000000!5m2!1sen!2sin"
+        allowfullscreen="" loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="logo" style="display: inline-flex;">
+          <div class="logo-mark">A</div>
+          <div class="logo-text">
+            <span class="name">ARKA</span>
+            <span class="tagline">Design & Structures</span>
+          </div>
+        </a>
+        <p>A multidisciplinary consultancy delivering premium Architecture, Structural Engineering, and Interior Design solutions across India — from concept to completion.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/919039302442" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Architecture</a></li>
+          <li><a href="#services">Structural Engineering</a></li>
+          <li><a href="#services">Interior Design</a></li>
+          <li><a href="#services">Construction Consultancy</a></li>
+          <li><a href="#services">Industrial Consultancy</a></li>
+          <li><a href="#services">Project Management</a></li>
+          <li><a href="#services">BOQ & Cost Estimation</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#process">Our Process</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <i class="fas fa-phone"></i>
+          <a href="tel:+919039302442">+91 90393 02442</a>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fab fa-whatsapp"></i>
+          <a href="https://wa.me/919039302442" target="_blank">WhatsApp Us</a>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:info@arkadesignstructures.com">info@arkadesignstructures.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <span>Indore, Madhya Pradesh, India</span>
+        </div>
+        <div style="margin-top: 20px;">
+          <a href="#contact" class="btn-primary" style="font-size: 13px; padding: 12px 22px;">
+            <i class="fas fa-comments"></i> Free Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 Arka Design & Structures. All rights reserved. | Indore, India</p>
+      <p>Designed with precision by <a href="#">Arka Team</a></p>
+    </div>
+  </footer>
+
+  <!-- Floating Buttons -->
+  <a href="https://wa.me/919039302442?text=Hello%2C%20I%20am%20interested%20in%20your%20design%20services." class="float-whatsapp" target="_blank" aria-label="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <a href="tel:+919039302442" class="float-call" aria-label="Call Now">
+    <i class="fas fa-phone"></i>
+  </a>
+
+  <div class="float-top" id="backToTop" onclick="window.scrollTo({top:0, behavior:'smooth'})" aria-label="Back to Top">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.classList.add('scrolled');
+        backToTop.classList.add('visible');
+      } else {
+        navbar.classList.remove('scrolled');
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    // Mobile menu
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('open');
+    }
+
+    // Form submission
+    function submitForm(e) {
+      e.preventDefault();
+      const form = document.getElementById('contactForm');
+      const success = document.getElementById('formSuccess');
+      form.style.display = 'none';
+      success.style.display = 'block';
+    }
+
+    // Intersection Observer for scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.service-card, .why-card, .testimonial-card, .process-content, .portfolio-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(30px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
+
